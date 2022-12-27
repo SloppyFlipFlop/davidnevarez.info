@@ -1,0 +1,73 @@
+@use "./../../vars.scss" as *;
+
+#section_conatiner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0;
+  #swirl {
+    position: absolute;
+    top: 0;
+    left: -5%;
+    z-index: -1;
+    transform: rotate(20deg);
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    width: 100%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+
+  #card_wrapper {
+    position: relative;
+
+    .card {
+      opacity: 1;
+      filter: blur(0);
+      transition: all 1s ease;
+      transform: translateX(0);
+      &:nth-child(1) {
+        transition-delay: 200ms;
+      }
+      &:nth-child(2) {
+        transition-delay: 400ms;
+      }
+      &:nth-child(3) {
+        transition-delay: 600ms;
+      }
+      &:nth-child(odd) {
+        .image {
+          transform: rotate(-3deg);
+        }
+      }
+      &:nth-child(even) {
+        margin-left: auto;
+        .image {
+          transform: rotate(-3deg) translateX(-1rem);
+        }
+      }
+      height: 10rem;
+      min-height: fit-content;
+      width: 40%;
+      border-radius: 1rem;
+      min-width: fit-content;
+      position: relative;
+      color: $primary_font_color;
+      .image {
+        border-radius: inherit;
+      }
+    }
+    .hide {
+      &:nth-child(odd) {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-100%);
+      }
+      &:nth-child(even) {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(100%);
+      }
+    }
+  }
+}

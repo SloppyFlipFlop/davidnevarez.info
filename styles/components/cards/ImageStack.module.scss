@@ -1,0 +1,123 @@
+@use "./../../vars.scss" as *;
+
+$odd_background_card_color: linear-gradient(45deg, #21a8d5 6.72%, #33ccfe 93.28%);
+$even_background_card_color: linear-gradient(45deg, #ff6b00 6.72%, #ff9e00 93.28%);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+/*
+  TODO: fix .even styles line 35-49
+*/
+
+// #photo_container {
+//   &:nth-child(odd) {
+//     &::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     border-radius: inherit;
+//     background: $odd_background_card_color;
+//     // @include random-bgr();
+//     z-index: -1;
+//     animation: odd_background_card_idle_animation 10s linear infinite;
+//     animation-fill-mode: reverse;
+//     }
+//   }
+//   &:nth-child(even) {
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       border-radius: inherit;
+//       background: $even_background_card_color;
+//       z-index: -1;
+//       animation: even_background_card_idle_animation 10s linear infinite;
+//       animation-fill-mode: reverse;
+//     }
+//   }
+// }
+
+#card {
+  border-radius: 1rem;
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+
+  // .photo {
+  &:nth-child(odd) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: $odd_background_card_color;
+      // @include random-bgr();
+      z-index: -1;
+      animation: odd_background_card_idle_animation 10s linear infinite;
+      animation-fill-mode: reverse;
+    }
+  }
+  &:nth-child(even) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: $even_background_card_color;
+      z-index: -1;
+      animation: even_background_card_idle_animation 10s linear infinite;
+      animation-fill-mode: reverse;
+    }
+  }
+  // }
+}
+
+@keyframes even_background_card_idle_animation {
+  // makes the even card shift up and down
+  0% {
+    transform: translateY(0) rotate(-10deg) translateX(-2rem);
+  }
+  25% {
+    transform: translateY(-0.75rem) rotate(-10deg) translateX(-2rem);
+  }
+  50% {
+    transform: translateY(0) rotate(-10deg) translateX(-2rem);
+  }
+  75% {
+    transform: translateY(0.75rem) rotate(-10deg) translateX(-2rem);
+  }
+  100% {
+    transform: translateY(0) rotate(-10deg) translateX(-2rem);
+  }
+}
+
+@keyframes odd_background_card_idle_animation {
+  // makes the odd cards shift up and down
+  0% {
+    transform: translateY(0) rotate(5deg) translateX(2rem);
+  }
+  25% {
+    transform: translateY(-0.75rem) rotate(5deg) translateX(2rem);
+  }
+  50% {
+    transform: translateY(0) rotate(5deg) translateX(2rem);
+  }
+  75% {
+    transform: translateY(0.75rem) rotate(5deg) translateX(2rem);
+  }
+  100% {
+    transform: translateY(0) rotate(5deg) translateX(2rem);
+  }
+}

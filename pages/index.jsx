@@ -5,11 +5,12 @@ import { useEffect } from "react";
 // components
 import FadeInCard from "../components/cards/FadeIn";
 import Swirl from "../components/Swirl";
-import ImageStack from "../components/cards/ImageStack";
 import PhotoDivider from "../components/PhotoDivider";
+import SlideUpCard from "../components/cards/SlideUp";
 
 // icons
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 
 import pageStyles from "../styles/pages/Home.module.scss";
 
@@ -30,89 +31,18 @@ export default function Home() {
   ];
   return (
     <main>
-      <>
-        Irure veniam adipisicing commodo excepteur id eiusmod in consectetur
-        tempor incididunt aliqua enim sit. Incididunt aliquip est aliqua enim
-        incididunt eiusmod ex nulla ipsum velit. Enim pariatur amet ipsum magna
-        quis cillum elit dolore culpa. Do incididunt do nulla Lorem sunt
-        incididunt officia consequat deserunt. Aute culpa fugiat aliquip irure
-        ex. Dolore cillum dolor dolor id magna dolor ipsum do sit ipsum. Amet
-        cupidatat sunt culpa esse enim eiusmod. Amet sit est sint id enim enim
-        nostrud incididunt duis ullamco aute et veniam. Non aliqua ex sit
-        officia incididunt culpa irure elit ut ipsum non proident. Nulla labore
-        ex voluptate ex velit mollit reprehenderit labore proident et aliqua
-        elit. Proident enim adipisicing eiusmod nulla quis pariatur laborum et
-        ex. Voluptate esse mollit consequat nulla deserunt irure labore labore.
-        Aute esse fugiat Lorem Lorem veniam tempor voluptate officia anim ex
-        occaecat est. Cupidatat id ea cupidatat id dolor qui officia. Magna
-        reprehenderit pariatur amet ipsum aute irure et ullamco laboris.
-        Cupidatat proident laboris enim irure aliquip laboris id Lorem aliqua.
-        Anim sit consectetur consequat non esse proident incididunt dolor sunt
-        laboris. Reprehenderit veniam ullamco dolor exercitation esse
-        adipisicing.Ad nisi anim pariatur in nulla commodo commodo ullamco id
-        nulla. Velit esse ea incididunt id aliquip laborum amet amet
-        reprehenderit adipisicing excepteur exercitation enim. Do minim do
-        fugiat sint officia. Duis ut proident duis voluptate eu duis commodo et
-        dolore tempor occaecat non exercitation. Ea qui deserunt sunt laboris
-        occaecat eiusmod deserunt quis. Est cillum ex laboris excepteur anim
-        magna mollit et incididunt adipisicing fugiat Lorem. Dolore excepteur
-        dolore magna laborum labore cillum sit aliqua cupidatat aute ad dolor
-        magna. Do tempor irure qui non deserunt minim est ex nostrud esse.
-        Incididunt velit labore est deserunt dolore. Mollit in sint officia
-        consequat labore aliqua quis. Lorem sint ipsum laborum non pariatur
-        Lorem laborum est amet sint occaecat aliqua.Id non qui deserunt veniam
-        ea. Ad cupidatat commodo fugiat sunt culpa tempor nostrud ea quis
-        commodo occaecat. Consectetur sunt et ea consequat Lorem aute aliquip
-        in. Cupidatat qui exercitation sunt quis aliqua voluptate anim proident
-        sunt dolore amet. Pariatur ex do ullamco in cupidatat nulla mollit
-        mollit commodo esse esse in. Lorem nostrud ex labore quis ipsum aute in
-        proident tempor irure do fugiat fugiat ipsum. Eu eiusmod minim non id
-        aliquip nulla qui quis cupidatat tempor. Minim dolor duis exercitation
-        proident esse do enim labore duis labore. Elit cillum laborum id ad sit
-        elit minim pariatur do ad. Enim sint amet officia ullamco tempor magna
-        mollit mollit quis consequat. Amet officia aute enim proident ex ex id
-        ea anim esse laboris ex dolor. Consectetur elit quis eiusmod nisi cillum
-        culpa nostrud excepteur ad. Aute anim mollit velit quis proident duis
-        commodo occaecat est et duis occaecat reprehenderit aliqua. Tempor
-        occaecat aute labore officia excepteur aliqua do. Est labore elit
-        voluptate quis magna ad enim non ullamco pariatur adipisicing. Velit qui
-        laboris eiusmod ut reprehenderit ipsum irure consectetur culpa duis
-        adipisicing nostrud. Ut dolore sit quis voluptate cillum minim sunt.
-        Velit anim officia reprehenderit deserunt Lorem incididunt mollit enim
-        ea proident Lorem pariatur duis. Cupidatat id dolore ut excepteur est eu
-        pariatur esse reprehenderit. Tempor ipsum sint fugiat anim exercitation
-        pariatur ipsum nostrud voluptate nulla magna et commodo. Dolor
-        incididunt deserunt veniam ut commodo. Sunt eiusmod pariatur fugiat sit
-        labore cillum.Occaecat ut proident proident officia. Elit eiusmod cillum
-        anim pariatur in ipsum sit ut proident. Velit ea laboris fugiat sunt
-        voluptate. Nisi sunt reprehenderit aliquip voluptate aute laborum eu ad
-        proident ut aute reprehenderit. Est consequat Lorem anim aliqua duis
-        enim est commodo amet magna reprehenderit culpa. Irure mollit proident
-        pariatur laborum deserunt labore aliqua do duis occaecat irure nostrud.
-        Anim occaecat aliquip proident nisi eu dolor ad cillum duis voluptate
-        cillum occaecat sint proident. Laboris sit est Lorem velit excepteur
-        cupidatat laboris commodo excepteur do tempor. Exercitation dolor
-        voluptate veniam ad tempor nostrud fugiat ea magna reprehenderit
-        excepteur culpa aliquip. Quis proident laboris eu fugiat officia laborum
-        laboris. Laboris commodo esse pariatur occaecat eiusmod minim velit
-        officia cupidatat mollit proident sit. Ea culpa sit non aliqua non
-        deserunt id Lorem do aute sint aliqua.Commodo incididunt dolore anim in
-        occaecat non deserunt aliqua eiusmod ipsum. Proident ex irure sint sunt
-        commodo nostrud nisi. Ipsum officia magna aliquip adipisicing ipsum duis
-        velit consectetur ut pariatur. Anim excepteur veniam et exercitation
-        eiusmod dolore quis ipsum ex nulla culpa officia exercitation
-        exercitation. Consequat aute adipisicing tempor minim dolore ex. Do
-        voluptate nostrud ut velit aliqua sit laboris irure. Non culpa ea enim
-        velit. Exercitation eu tempor magna labore sunt. Commodo consequat
-        consectetur pariatur ullamco. Deserunt aute mollit reprehenderit fugiat
-        non in Lorem dolore ex ut ullamco duis. Deserunt non sunt Lorem duis
-        dolore sint do deserunt ut ea tempor ea aute consectetur. Dolor sint ex
-        voluptate eu reprehenderit aute dolore aliqua ipsum incididunt enim.
-        Consectetur aliquip labore mollit deserunt officia laborum excepteur
-        enim nisi quis occaecat amet laboris exercitation. Officia consectetur
-        in in voluptate excepteur voluptate proident officia duis fugiat mollit
-        ad. Magna excepteur tempor non aliqua et.
-      </>
+      <section id={pageStyles.hero_section}>
+        <FadeInCard>
+          <h1>This Website is under construction</h1>
+          <p>
+            Come back later to see the full website. But in the meantime,
+            here&#39;s a little bit about me.
+          </p>
+        </FadeInCard>
+        <div id={pageStyles.down_arrow}>
+          <FaArrowDown />
+        </div>
+      </section>
 
       <section id={pageStyles.about_section}>
         <FadeInCard>
@@ -157,21 +87,20 @@ export default function Home() {
               About <span>Me</span>
             </h2>
             <p className={pageStyles.description}>
-              In ipsum sint sit ad amet incididunt aute occaecat cillum dolor
-              veniam deserunt.Pariatur adipisicing do magna voluptate.Eiusmod ad
-              officia nulla eu dolor sunt officia irure reprehenderit occaecat.
+              Hello 👋🏼, my name is David. I am a College undergraduate student
+              at Arizona State University studying computer science. I&#39;m
+              also a certified Full-Stack Developer, knowing a wide range and
+              languages and frameworks. I&#39;m also a member of ASU&#39;s
+              CodeDevil, where I&#39;m currently helping to develop a new
+              version of the club website under the Next.js framework.
             </p>
             <p className={pageStyles.description}>
-              Cillum minim ex eiusmod eu id pariatur voluptate eiusmod
-              adipisicing eu est occaecat culpa do. Qui cupidatat ad consectetur
-              sunt Lorem ad officia et mollit laborum non culpa. Reprehenderit
-              elit amet veniam eu nostrud irure fugiat proident ex veniam id
-              mollit culpa pariatur. Et occaecat sint do laborum sunt incididunt
-              exercitation ut nostrud aliquip elit eu reprehenderit. Et sint id
-              aute deserunt. Proident dolore veniam est labore aute exercitation
-              sunt officia labore deserunt. Lorem voluptate excepteur minim
-              commodo. Aliquip cupidatat minim reprehenderit consequat. Ex quis
-              ex ad duis labore laborum culpa.
+              However, I&#39;m not just a developer because I also strive to be
+              a leader wherever I can. However, although I&#39;m not in a
+              leadership position at the moment, I do plan to be in the future.
+              But as of now, I&#39;m trying to take part in as many research
+              opportunities as I can right now. Since I&#39;m wanting to dive
+              into artificial intelligence in the future.
             </p>
             <div id={pageStyles.socials}>
               <Image
@@ -188,7 +117,7 @@ export default function Home() {
                     className={pageStyles.link_wrapper}
                   >
                     <FaGithub className={pageStyles.icon} />
-                    <p className={pageStyles.text}>SloppyFlipFlop</p>
+                    <p className={pageStyles.text}>Github</p>
                   </Link>
                 </li>
                 <li>
@@ -197,7 +126,16 @@ export default function Home() {
                     className={pageStyles.link_wrapper}
                   >
                     <FaLinkedinIn className={pageStyles.icon} />
-                    <p className={pageStyles.text}>David Nevarez</p>
+                    <p className={pageStyles.text}>LinkedinIn</p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://www.instagram.com/david_nevarez__/"
+                    className={pageStyles.link_wrapper}
+                  >
+                    <FaInstagram className={pageStyles.icon} />
+                    <p className={pageStyles.text}>Instagram</p>
                   </Link>
                 </li>
               </ul>
@@ -206,35 +144,63 @@ export default function Home() {
         </FadeInCard>
       </section>
 
-      <section id={pageStyles.extracurricular_section}>
+      {/* <section id={pageStyles.extracurricular_section}>
+        <h2 id={pageStyles.section_title}>
+          Extracurricular
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 742 26"
+            fill="none"
+            class="TextBlock_line___naGK"
+          >
+            <path
+              stroke="#C0BFBF"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-opacity="0.4"
+              stroke-width="6"
+              d="M1 13c22.418 16 44.836 16 67.253 0 22.418-16 44.836-16 67.254 0 22.417 16 44.835 16 67.253 0 22.417-16 44.835-16 67.253 0s44.836 16 67.253 0c22.418-16 44.836-16 67.253 0 22.418 16 44.836 16 67.254 0 22.418-16 44.835-16 67.253 0s44.836 16 67.253 0c22.418-16 44.836-16 67.254 0m.214 0c22.417 16 44.835 16 67.253 0"
+              // style="mix-blend-mode:multiply"
+            ></path>
+          </svg>
+        </h2>
         <FadeInCard>
-          <h2 id={pageStyles.section_title}>
-            Extracurricular
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 742 26"
-              fill="none"
-              class="TextBlock_line___naGK"
-            >
-              <path
-                stroke="#C0BFBF"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-opacity="0.4"
-                stroke-width="6"
-                d="M1 13c22.418 16 44.836 16 67.253 0 22.418-16 44.836-16 67.254 0 22.417 16 44.835 16 67.253 0 22.417-16 44.835-16 67.253 0s44.836 16 67.253 0c22.418-16 44.836-16 67.253 0 22.418 16 44.836 16 67.254 0 22.418-16 44.835-16 67.253 0s44.836 16 67.253 0c22.418-16 44.836-16 67.254 0m.214 0c22.417 16 44.835 16 67.253 0"
-                // style="mix-blend-mode:multiply"
-              ></path>
-            </svg>
-          </h2>
-          <PhotoDivider imagesArray={photoDividerImages} />
-          <div id={pageStyles.FBLA_container}>
-            <h2>FBLA</h2>
+          <div className={pageStyles.extracurricular_wrapper}>
+            <PhotoDivider
+              imagesArray={photoDividerImages}
+              sectionTitle={"FBLA"}
+            />
+
+            <SlideUpCard>
+              <div id={pageStyles.description_container}>
+                <h2>Recounting my time</h2>
+                <p>
+                  Recalling my time well in FBLA, I could not emphasize enough
+                  on how much I have grown as a person because of it and just
+                  the overall enjoyment memories the organization has allowed me
+                  to experience. But just to explain a little bit about what i
+                  have done while in FBLA during my high school career, FBLA has
+                  provided me with numerous opportunities to develop my
+                  leadership and professional skills. I have had the chance to
+                  participate in various conferences and competitions, which
+                  have helped me to network with other business professionals
+                  and learn about the latest trends and developments in the
+                  industry. Additionally, being a member of The Future Business
+                  Leaders of America has allowed me to give back to my community
+                  through various service projects. Overall, my time in The
+                  Future Business Leaders of America has been extremely
+                  rewarding and has helped me to grow both personally and
+                  professionally.
+                </p>
+              </div>
+            </SlideUpCard>
           </div>
         </FadeInCard>
-      </section>
+      </section> */}
 
-      <>
+      {/* <section id={pageStyles.projects_section}></section> */}
+
+      {/* <>
         Do id proident proident dolor aliqua id. Consequat veniam tempor
         proident dolor. Aliquip dolore anim irure id cillum officia. Consectetur
         laborum culpa nostrud minim non in aliquip. Lorem culpa laboris laborum
@@ -338,7 +304,7 @@ export default function Home() {
         deserunt eiusmod nostrud. Incididunt aliqua amet laborum sunt
         reprehenderit voluptate sit nisi incididunt tempor reprehenderit ea
         consequat non.
-      </>
+      </> */}
     </main>
   );
 }

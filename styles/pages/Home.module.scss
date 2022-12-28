@@ -1,5 +1,38 @@
 @use "./../vars.scss" as *;
 
+#hero_section {
+  text-align: center;
+  font-size: x-large;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    // font-size: 1.5rem;
+    margin: 1rem 0 2rem 0;
+  }
+  #down_arrow {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: down_arrow_animation 2s infinite linear;
+  }
+}
+
+@keyframes down_arrow_animation {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0.5rem);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 // about me section styles
 #about_container {
   background: $primary_background;
@@ -47,6 +80,8 @@
 
   .description {
     margin: 1rem 0;
+    // text-indent: 5%;
+    // text-align: left;
   }
 
   #socials {
@@ -56,10 +91,11 @@
     flex-direction: row;
     flex-wrap: nowrap;
     #personal_image {
-      width: 125px;
-      height: 125px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      margin-right: 1rem;
+      margin-right: 2rem;
+      margin-left: 1rem;
     }
     ul {
       list-style: none;
@@ -210,13 +246,57 @@
 // extracurriculars section styles
 
 #extracurricular_section {
+  position: relative;
   padding: 1rem 0;
-  // display: flex;
+  min-height: fit-content;
+  margin: 6rem 0;
+
+  .extracurricular_wrapper {
+    .background_image_conatiner {
+      position: absolute;
+      bottom: -5%;
+      right: 10%;
+      width: 5rem;
+      height: 5rem;
+      z-index: -2;
+      opacity: 1;
+
+      transform: all 5s ease;
+      transform: rotate(5deg);
+    }
+    .blur_background_image {
+      opacity: 0;
+    }
+  }
 
   #section_title {
     font-size: 2.5rem;
     text-align: center;
     width: fit-content;
     margin: 0 auto;
+  }
+  // #FBLA_container {
+  //   position: absolute;
+  //   top: 0;
+  //   z-index: -1;
+  //   background: $primary_background;
+  //   width: 90vw;
+  //   margin: auto;
+  //   min-height: 10rem;
+  //   color: $primary_font_color;
+  //   border-radius: 1rem;
+  //   padding: 0 1rem;
+  //   background: $primary_background;
+  //   #container_title {
+  //     font-size: 3.5rem;
+  //   }
+  // }
+  #description_container {
+    background: $primary_background;
+    color: $primary_font_color;
+    padding: 1rem;
+    margin: 0 1.5rem;
+    border-radius: 1rem;
+    text-align: left;
   }
 }

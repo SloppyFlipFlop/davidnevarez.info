@@ -14,9 +14,9 @@ const inter = Inter({ subsets: ["latin"] });
 const PageLayout = ({ children }) => {
   return (
     <div id={layoutStyles.page_container} className={inter.className}>
-      <Navbar />
+      {/* <Navbar /> */}
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

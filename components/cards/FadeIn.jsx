@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 const FadeInCard = ({ children }) => {
   const { ref: cardRef, inView: isInView } = useInView({
-    threshold: 0,
+    threshold: 0.1,
   });
   return (
     <div ref={cardRef} id={"card"} className={`${isInView ? "show" : "hide"}`}>

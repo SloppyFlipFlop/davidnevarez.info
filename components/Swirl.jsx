@@ -6,8 +6,8 @@ import swirlStyles from "./../styles/components/Swirl.module.scss";
 
 const Swirl = ({ color }) => {
   const { ref: swirlRef, inView: isInView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
+    threshold: 0,
+    // triggerOnce: true,
   });
   return (
     <svg

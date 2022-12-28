@@ -1,0 +1,17 @@
+@use "./../../vars.scss" as *;
+
+.container {
+  position: relative;
+  > * {
+    transition: all 1s ease;
+    transform: translateY(0);
+  }
+}
+
+.hide {
+  > * {
+    transform: translateY(100%);
+  }
+  top: 100%;
+  opacity: 0;
+}

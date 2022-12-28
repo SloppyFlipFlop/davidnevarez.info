@@ -14,7 +14,8 @@
   }
   #down_arrow {
     position: absolute;
-    top: 70%;
+    // top: 70%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     animation: down_arrow_animation 2s infinite linear;

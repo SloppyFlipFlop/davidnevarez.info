@@ -14,7 +14,8 @@
   }
   #down_arrow {
     position: absolute;
-    top: 70%;
+    // top: 70%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     animation: down_arrow_animation 2s infinite linear;
@@ -38,9 +39,9 @@
   background: $primary_background;
   color: $primary_font_color;
   padding: 2rem 1.5rem;
-  margin: 3rem 1rem;
+  margin: 3rem auto;
   border-radius: 2rem;
-  width: fit-content;
+  min-width: fit-content;
   height: fit-content;
   position: relative;
   display: flex;
@@ -154,6 +155,30 @@
   }
 }
 
+// #swirl1 {
+//   width: 4em;
+//   height: 5rem;
+//   position: absolute;
+//   bottom: 15%;
+//   right: 15%;
+//   // right: 5rem;
+//   z-index: 1;
+//   min-width: fit-content;
+//   transform: rotate(70deg);
+//   svg {
+//     // transform: scaleX(-1);
+//   }
+// }
+
+// #swirl2 {
+//   bottom: -5%;
+//   left: -2rem;
+//   z-index: 1;
+//   transform: rotate(-15deg) scaleX(-1);
+//   width: 10rem;
+//   height: 10rem;
+// }
+
 #swirl1 {
   position: absolute;
   top: 0;
@@ -171,11 +196,12 @@
 // sun svg styles
 #sun {
   position: absolute;
-  top: 25%;
-  right: 0;
-  width: 25%;
-  height: 25%;
-  z-index: 0;
+  top: -15%;
+  right: -15%;
+  width: 40%;
+  height: 40%;
+
+  z-index: 1;
   animation: spin 7s linear infinite;
   #sunshine {
     mix-blend-mode: multiply;
@@ -231,11 +257,35 @@
       font-size: 3.5rem;
     }
   }
+
   #about_section {
     margin: 5rem 0;
+    // .arrowed_swirl {
+    //   width: 80%;
+    //   height: 80%;
+    //   svg {
+    //     // width: 80%;
+    //     // height: 80%;
+    //   }
+    // }
   }
+  // #swirl1 {
+  //   z-index: 0;
+  // }
   #swirl2 {
     z-index: 1;
+  }
+  #sun {
+    // position: absolute;
+    top: 25%;
+    right: 0;
+    width: 25%;
+    height: 25%;
+    z-index: 0;
+    // animation: spin 7s linear infinite;
+    // #sunshine {
+    //   mix-blend-mode: multiply;
+    // }
   }
 }
 

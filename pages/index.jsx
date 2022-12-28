@@ -40,7 +40,7 @@ export default function Home() {
         <FadeInCard>
           <h1>My portfolio Website is currently under construction</h1>
           <p>
-            Come back later to see the finshed website. But in the meantime,
+            Come back later to see the finished website. But in the meantime,
             here&#39;s a little bit about me.
           </p>
         </FadeInCard>

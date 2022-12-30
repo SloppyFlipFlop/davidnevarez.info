@@ -13,10 +13,10 @@
     margin: 1rem 0 2rem 0;
   }
   #down_arrow {
-    position: absolute;
-    // top: 70%;
-    bottom: 5%;
-    left: 50%;
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+
     transform: translateX(-50%);
     animation: down_arrow_animation 2s infinite linear;
   }
@@ -360,7 +360,7 @@
     .extracurricular_wrapper {
       .background_image_conatiner {
         top: -10rem;
-        right: 8%;
+        right: 4vw;
         width: 10rem;
         height: 10rem;
         z-index: -2;
@@ -375,29 +375,5 @@
     #description_container {
       margin: 0 3rem;
     }
-  }
-}
-
-// cloud styles
-.cloud_wrapper {
-  // animation: cloud_animation 30s linear infinite;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: o;
-  top: 0;
-  z-index: -3;
-  width: 100vw;
-  height: 100vh;
-}
-
-@keyframes cloud_animation {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }

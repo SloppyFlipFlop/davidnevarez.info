@@ -7,7 +7,7 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-evenly;
-  padding: 0 5%;
+  padding: 0 2%;
   margin: 5rem 0;
   align-items: center;
 
@@ -15,45 +15,61 @@
 
   > div.card {
     // animation: card_3D_hover_effect 10s infinite linear;
+    position: relative;
 
-    &::after {
-      // background: red;
-      // center the shadow
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    // &::after {
+    //   // background: red;
+    //   // center the shadow
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
 
-      // &::after {
-      content: " ";
-      position: absolute;
-      width: 100%;
-      height: 10px;
-      border-radius: 50%;
-      left: 0;
-      // background: hsla(0, 0%, 0%, 0.4);
-      bottom: -3rem;
-      // box-shadow: 0 30px 20px rgb(0 0 0 / 30%);
-      animation: card_3D_hover_effect 5s infinite linear;
-      // animation-fill-mode: ;
-      // }
+    //   // &::after {
+    //   content: "";
+    //   // make the background rezie to fit the container
+    //   background-image: url(../../../public/0001.png);
+    //   background-size: contain;
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   animation: bounce 10s infinite linear;
+    //   animation-fill-mode: reverse;
 
-      // ~~~~~~~~~
+    //   // -webkit-background-size: cover;
+    //   // -moz-background-size: cover;
+    //   // -o-background-size: cover;
+    //   background-size: cover;
+    //   position: absolute;
+    //   width: 20rem;
+    //   height: 12rem;
+    //   // border-radius: 50%;
+    //   left: -4rem;
+    //   // background: hsla(0, 0%, 0%, 0.4);
+    //   bottom: -7rem;
+    //   z-index: 0;
 
-      // border-radius: 100%;
-      // bottom: -34.5%;
-      // /* left: calc(50% - 50px); */
-      // /* right: calc(50% - 50px); */
-      // /* left: 25%; */
-      // position: absolute;
-      // content: "";
-      // background-color: black;
-      // filter: blur(3px);
-      // width: 50px;
-      // height: 5px;
-      // animation: desktop_shadow__TQP94 1s ease-in-out infinite;
-      // animation-fill-mode: both;
-      // animation-direction: alternate;
-    }
+    //   // background-image: url(../../../public/0001.png);
+    //   // box-shadow: 0 30px 20px rgb(0 0 0 / 30%);
+    //   // animation: card_3D_hover_effect 5s infinite linear;
+    //   // animation-fill-mode: ;
+    //   // }
+
+    //   // ~~~~~~~~~
+
+    //   // border-radius: 100%;
+    //   // bottom: -34.5%;
+    //   // /* left: calc(50% - 50px); */
+    //   // /* right: calc(50% - 50px); */
+    //   // /* left: 25%; */
+    //   // position: absolute;
+    //   // content: "";
+    //   // background-color: black;
+    //   // filter: blur(3px);
+    //   // width: 50px;
+    //   // height: 5px;
+    //   // animation: desktop_shadow__TQP94 1s ease-in-out infinite;
+    //   // animation-fill-mode: both;
+    //   // animation-direction: alternate;
+    // }
 
     opacity: 1;
     filter: blur(0);
@@ -255,3 +271,15 @@
 //     transform: scale(100%);
 //   }
 // }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

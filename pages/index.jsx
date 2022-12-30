@@ -17,6 +17,7 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
 
 import pageStyles from "../styles/pages/Home.module.scss";
+import CloudBackground from "../components/CloudBackground";
 
 export default function Home() {
   const { state } = useContext(AppContext);
@@ -229,9 +230,11 @@ export default function Home() {
         </FadeInCard>
       </section>
 
+      <CloudBackground />
+
       {/* <section id={pageStyles.projects_section}></section> */}
 
-      <>
+      {/* <>
         Do id proident proident dolor aliqua id. Consequat veniam tempor
         proident dolor. Aliquip dolore anim irure id cillum officia. Consectetur
         laborum culpa nostrud minim non in aliquip. Lorem culpa laboris laborum
@@ -335,10 +338,9 @@ export default function Home() {
         deserunt eiusmod nostrud. Incididunt aliqua amet laborum sunt
         reprehenderit voluptate sit nisi incididunt tempor reprehenderit ea
         consequat non.
-      </>
+      </> */}
 
-      <>
-        {/* craete a video */}
+      {/* <>
 
         <video
           autoPlay
@@ -355,16 +357,8 @@ export default function Home() {
           Your browser does not support HTML video.
         </video>
 
-        <div className={pageStyles.cloud_wrapper}>
-          <Image
-            id={pageStyles.cloud}
-            src="/0001.png"
-            width={300}
-            height={200}
-            alt="cloud"
-          />
-        </div>
-      </>
+        
+      </> */}
     </main>
   );
 }

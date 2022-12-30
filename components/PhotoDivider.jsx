@@ -15,18 +15,32 @@ import pageStyles from "./../styles/pages/Home.module.scss";
 import desktopStyles from "./../styles/components/photoDivider/desktop.module.scss";
 import mobileStyles from "./../styles/components/photoDivider/mobile.module.scss";
 
-const DesktopPhotoDivider = ({ images }) => {
-  const { ref: dividerRef, inView: isInView } = useInView({
+const DesktopPhotoDivider = ({ images, sectionTitle }) => {
+  const { ref: dividerRef, inView: isCardInView } = useInView({
     threshold: 0,
   });
   return (
     <section ref={dividerRef} id={desktopStyles.photo_container}>
       {/* <ul id={desktopStyles.card_wrapper}> */}
+      {sectionTitle == "FBLA" && (
+        <div className={pageStyles.background_image_conatiner}>
+          <Image
+            id={pageStyles.FBLA_logo}
+            class={pageStyles.extracurricular_background_image}
+            src="/FBLA_Arizona_logo.png"
+            alt="FBLA logo"
+            layout="fill"
+          />
+        </div>
+      )}
+
       {images?.map((image, index) => {
         return (
           <div
             key={index}
-            className={`${isInView ? desktopStyles.card : desktopStyles.hide}`}
+            className={`${
+              isCardInView ? desktopStyles.card : desktopStyles.hide
+            }`}
           >
             <ImageStack>
               <Image
@@ -45,33 +59,42 @@ const DesktopPhotoDivider = ({ images }) => {
 };
 
 const MobilePhotoDivider = ({ images, sectionTitle }) => {
-  const { ref: cardRef, inView: isInView } = useInView({
+  const { ref: cardRef, inView: isCardInView } = useInView({
     threshold: 0,
   });
+
   return (
     <section id={mobileStyles.section_conatiner} ref={cardRef}>
       <div
         id={mobileStyles.swirl}
         className={`${mobileStyles.background_icon} ${mobileStyles.arrowed_swirl}`}
       >
-        <Swirl color={"#24c7fd"} />
+        <Swirl color={"#24c7fd"} threshold={0.3} />
       </div>
       {/* <SlideUpCard> */}
-      <FadeInCard>
-        <div id={mobileStyles.title_container}>
-          <h2 id={mobileStyles.container_title}>{sectionTitle}</h2>
-        </div>
-      </FadeInCard>
+      {/* <FadeInCard> */}
+      {/* <div
+        className={`${
+          isTitleInView ? mobileStyles.title_container : mobileStyles.hide
+        }`}
+        ref={titleRef}
+        // className={`${mobileStyles.title_container}`}
+      >
+        <h2 id={`${mobileStyles.container_title}`}>{sectionTitle}</h2>
+      </div> */}
+      {/* </FadeInCard> */}
 
-      <div className={pageStyles.background_image_conatiner}>
-        <Image
-          id={pageStyles.FBLA_logo}
-          class={pageStyles.extracurricular_background_image}
-          src="/FBLA_Arizona_logo.png"
-          alt="FBLA logo"
-          layout="fill"
-        />
-      </div>
+      {sectionTitle == "FBLA" && (
+        <div className={pageStyles.background_image_conatiner}>
+          <Image
+            id={pageStyles.FBLA_logo}
+            class={pageStyles.extracurricular_background_image}
+            src="/FBLA_Arizona_logo.png"
+            alt="FBLA logo"
+            layout="fill"
+          />
+        </div>
+      )}
 
       {/* </SlideUpCard> */}
       <ul id={mobileStyles.card_wrapper}>
@@ -79,7 +102,10 @@ const MobilePhotoDivider = ({ images, sectionTitle }) => {
           return (
             <li
               key={index}
-              className={` ${isInView ? mobileStyles.card : mobileStyles.hide}`}
+              className={` ${
+                isCardInView ? mobileStyles.card : mobileStyles.hide
+              }`}
+              // className={` ${mobileStyles.card}`}
             >
               <ImageStack>
                 <Image
@@ -105,7 +131,7 @@ const PhotoDivider = ({ imagesArray, sectionTitle }) => {
       {isMobile ? (
         <MobilePhotoDivider images={imagesArray} sectionTitle={sectionTitle} />
       ) : (
-        <DesktopPhotoDivider images={imagesArray} />
+        <DesktopPhotoDivider images={imagesArray} sectionTitle={sectionTitle} />
       )}
     </>
   );

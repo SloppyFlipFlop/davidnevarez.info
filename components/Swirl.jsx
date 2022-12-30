@@ -4,10 +4,20 @@ import { useInView } from "react-intersection-observer";
 
 import swirlStyles from "./../styles/components/Swirl.module.scss";
 
-const Swirl = ({ color }) => {
+// takes in optional props:
+// color: string
+// size: string
+// triggerOnce: boolean
+// threshold: number (0-1)
+
+const Swirl = ({ color, triggerOnce, threshold }) => {
+  // check if triggerOnce exists, if not set to false
+  // check if threshold exists, if not set to 0
+  console.log("triggerOnce", triggerOnce);
+
   const { ref: swirlRef, inView: isInView } = useInView({
-    threshold: 0,
-    // triggerOnce: true,
+    threshold: threshold ? threshold : 0,
+    triggerOnce: triggerOnce ? triggerOnce : false,
   });
   return (
     <svg

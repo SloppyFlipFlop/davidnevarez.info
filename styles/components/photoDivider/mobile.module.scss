@@ -16,9 +16,10 @@
     width: 100%;
     min-height: -moz-fit-content;
     min-height: fit-content;
+    height: 100%;
   }
 
-  #title_container {
+  .title_container {
     background: $primary_background;
     padding: 1rem;
     border-radius: 1rem;
@@ -27,9 +28,11 @@
 
     // z-index: -1;
     position: absolute;
-    transform: rotate(3deg);
+    // transform: rotate(3deg);
     right: 0;
     // top: 0;
+    transition: transform 800ms ease;
+    transform: translateX(0) rotate(3deg) scale(1);
     #container_title {
       color: $primary_font_color;
       text-align: center;
@@ -44,6 +47,9 @@
       background-clip: text;
     }
   }
+  .hide {
+    transform: translateX(100%) rotate(3deg) scale(1.5);
+  }
   #card_wrapper {
     position: relative;
 
@@ -52,14 +58,15 @@
       filter: blur(0);
       transition: all 1s ease;
       transform: translateX(0);
+
       &:nth-child(1) {
-        transition-delay: 200ms;
+        transition-delay: 800ms;
       }
       &:nth-child(2) {
-        transition-delay: 400ms;
+        transition-delay: 1s;
       }
       &:nth-child(3) {
-        transition-delay: 600ms;
+        transition-delay: 1.2s;
       }
       &:nth-child(odd) {
         .image {
@@ -81,7 +88,12 @@
       color: $primary_font_color;
       .image {
         border-radius: inherit;
+        box-shadow: $raised_shadow_effect;
       }
+
+      // &:nth-child(even) {
+      // animation: even_front_card_idle_animation 10s infinite linear;
+      // }
     }
     .hide {
       &:nth-child(odd) {
@@ -106,5 +118,24 @@
     to {
       background-position: 400% 0;
     }
+  }
+}
+
+@keyframes even_front_card_idle_animation {
+  // makes the even cards shift up and down
+  0% {
+    transform: translateY(0) rotate(-3deg) translateX(-1rem); // rotate(-3deg) translateX(-1rem); // rotate($front_card_rotation) translateX(-1rem);
+  }
+  25% {
+    transform: translateY(-0.5rem) rotate(-3deg) translateX(-1rem); //rotate(-3deg) translateX(-1rem); // rotate($front_card_rotation) translateX(-1rem);
+  }
+  50% {
+    transform: translateY(0) rotate(-3deg) translateX(-1rem); //rotate(-3deg) translateX(-1rem); // rotate($front_card_rotation) translateX(-1rem);
+  }
+  75% {
+    transform: translateY(0.5rem) rotate(-3deg) translateX(-1rem); //rotate(-3deg) translateX(-1rem); // rotate($front_card_rotation) translateX(-1rem);
+  }
+  100% {
+    transform: translateY(0) rotate(-3deg) translateX(-1rem); //rotate(-3deg) translateX(-1rem); // rotate($front_card_rotation) translateX(-1rem);
   }
 }

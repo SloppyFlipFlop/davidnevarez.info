@@ -175,7 +175,7 @@ export default function Home() {
         </FadeInCard>
       </section>
 
-      {/* <section id={pageStyles.extracurricular_section}>
+      <section id={pageStyles.extracurricular_section}>
         <h2 id={pageStyles.section_title}>
           Extracurricular
           <svg
@@ -227,11 +227,11 @@ export default function Home() {
             </SlideUpCard>
           </div>
         </FadeInCard>
-      </section> */}
+      </section>
 
       {/* <section id={pageStyles.projects_section}></section> */}
 
-      {/* <>
+      <>
         Do id proident proident dolor aliqua id. Consequat veniam tempor
         proident dolor. Aliquip dolore anim irure id cillum officia. Consectetur
         laborum culpa nostrud minim non in aliquip. Lorem culpa laboris laborum
@@ -335,7 +335,36 @@ export default function Home() {
         deserunt eiusmod nostrud. Incididunt aliqua amet laborum sunt
         reprehenderit voluptate sit nisi incididunt tempor reprehenderit ea
         consequat non.
-      </> */}
+      </>
+
+      <>
+        {/* craete a video */}
+
+        <video
+          autoPlay
+          muted
+          loop
+          src="/0001-0060.mp4"
+          style={{
+            width: "100%",
+            height: "10rem",
+            // objectFit: "cover",
+            background: "transparent",
+          }}
+        >
+          Your browser does not support HTML video.
+        </video>
+
+        <div className={pageStyles.cloud_wrapper}>
+          <Image
+            id={pageStyles.cloud}
+            src="/0001.png"
+            width={300}
+            height={200}
+            alt="cloud"
+          />
+        </div>
+      </>
     </main>
   );
 }

@@ -304,15 +304,14 @@
   .extracurricular_wrapper {
     .background_image_conatiner {
       position: absolute;
-      bottom: -5%;
-      right: 10%;
-      width: 5rem;
-      height: 5rem;
-      z-index: -2;
+      top: -5%;
+      right: 5%;
+      width: 7rem;
+      height: 7rem;
+      z-index: 0;
       opacity: 1;
-
       transform: all 5s ease;
-      transform: rotate(5deg);
+      transform: rotate(6deg);
     }
     .blur_background_image {
       opacity: 0;
@@ -344,9 +343,61 @@
   #description_container {
     background: $primary_background;
     color: $primary_font_color;
-    padding: 1rem;
-    margin: 0 1.5rem;
+    padding: 2rem 1.5rem;
+    // margin: 0;
     border-radius: 1rem;
     text-align: left;
+    p {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// desktop styles for extracurriculars section
+@media (min-width: $desktop_breakpoint) {
+  #extracurricular_section {
+    margin: 10rem 0;
+    .extracurricular_wrapper {
+      .background_image_conatiner {
+        top: -10rem;
+        right: 8%;
+        width: 10rem;
+        height: 10rem;
+        z-index: -2;
+        opacity: 1;
+        transform: all 5s ease;
+        transform: rotate(5deg);
+      }
+    }
+    #section_title {
+      font-size: 3.5rem;
+    }
+    #description_container {
+      margin: 0 3rem;
+    }
+  }
+}
+
+// cloud styles
+.cloud_wrapper {
+  // animation: cloud_animation 30s linear infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: o;
+  top: 0;
+  z-index: -3;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes cloud_animation {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }

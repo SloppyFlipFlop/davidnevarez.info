@@ -14,6 +14,47 @@
   min-height: fit-content;
 
   > div.card {
+    // animation: card_3D_hover_effect 10s infinite linear;
+
+    &::after {
+      // background: red;
+      // center the shadow
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // &::after {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      border-radius: 50%;
+      left: 0;
+      // background: hsla(0, 0%, 0%, 0.4);
+      bottom: -3rem;
+      // box-shadow: 0 30px 20px rgb(0 0 0 / 30%);
+      animation: card_3D_hover_effect 5s infinite linear;
+      // animation-fill-mode: ;
+      // }
+
+      // ~~~~~~~~~
+
+      // border-radius: 100%;
+      // bottom: -34.5%;
+      // /* left: calc(50% - 50px); */
+      // /* right: calc(50% - 50px); */
+      // /* left: 25%; */
+      // position: absolute;
+      // content: "";
+      // background-color: black;
+      // filter: blur(3px);
+      // width: 50px;
+      // height: 5px;
+      // animation: desktop_shadow__TQP94 1s ease-in-out infinite;
+      // animation-fill-mode: both;
+      // animation-direction: alternate;
+    }
+
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
@@ -28,13 +69,13 @@
     //   animation-fill-mode: forwards;
     //   // transform: rotate(3deg) translateX(1rem);
     // }
-    &:nth-child(1) {
+    &:nth-child(2) {
       transition-delay: 200ms;
     }
-    &:nth-child(2) {
+    &:nth-child(3) {
       transition-delay: 400ms;
     }
-    &:nth-child(3) {
+    &:nth-child(4) {
       transition-delay: 600ms;
     }
   }
@@ -46,35 +87,82 @@
 
   .photo {
     border-radius: inherit;
+    .card {
+      animation: even_front_card_idle_animation 5s infinite linear;
+      animation-fill-mode: forwards;
+    }
+
+    animation: odd_background_card_idle_animation 10s linear infinite;
+    &:nth-child(odd) {
+      animation-direction: reverse;
+    }
   }
 
-  .odd {
-    animation: odd_front_card_idle_animation 10s linear infinite;
-    animation-fill-mode: forwards;
-  }
+  // .odd {
+  // animation: odd_front_card_idle_animation 10s linear infinite;
+  // animation-fill-mode: reverse;
+  // animation: odd_background_card_idle_animation 10s linear infinite;
+  // &:nth-child(odd) {
+  //   animation-direction: reverse;
+  // }
+  // }
 
-  .even {
-    animation: even_front_card_idle_animation 10s infinite linear;
-    animation-fill-mode: forwards;
-  }
+  // .even {
+  //   animation: even_front_card_idle_animation 10s infinite linear;
+  //   animation-fill-mode: forwards;
+  // }
 }
 
-@keyframes odd_front_card_idle_animation {
+// @keyframes odd_front_card_idle_animation {
+//   // makes the odd cards shift up and down
+//   0% {
+//     transform: translateY(0) rotate(-3deg) translateX(-1rem);
+//   }
+//   25% {
+//     transform: translateY(-0.5rem) rotate(-3deg) translateX(-1rem);
+//   }
+//   50% {
+//     transform: translateY(0) rotate(-3deg) translateX(-1rem);
+//   }
+//   75% {
+//     transform: translateY(0.5rem) rotate(-3deg) translateX(-1rem);
+//   }
+//   100% {
+//     transform: translateY(0) rotate(-3deg) translateX(-1rem);
+//   }
+// }
+
+@keyframes odd_background_card_idle_animation {
   // makes the odd cards shift up and down
+  // 0% {
+  //   transform: translateY(0) rotate(-3deg) translateX(-1rem);
+  // }
+  // 25% {
+  //   transform: translateY(-0.5rem) rotate(-3deg) translateX(-1rem);
+  // }
+  // 50% {
+  //   transform: translateY(0) rotate(-3deg) translateX(-1rem);
+  // }
+  // 75% {
+  //   transform: translateY(0.75rem) rotate(-3deg) translateX(-1rem);
+  // }
+  // 100% {
+  //   transform: translateY(0) rotate(-3deg) translateX(-1rem);
+  // }
   0% {
-    transform: translateY(0) rotate(-3deg) translateX(-1rem);
+    transform: translateY(0) rotate(-3deg) translateX(-0.5rem);
   }
   25% {
-    transform: translateY(-0.5rem) rotate(-3deg) translateX(-1rem);
+    transform: translateY(-0.5rem) rotate(-3deg) translateX(-0.5rem);
   }
   50% {
-    transform: translateY(0) rotate(-3deg) translateX(-1rem);
+    transform: translateY(0rem) rotate(-3deg) translateX(-0.5rem);
   }
   75% {
-    transform: translateY(0.5rem) rotate(-3deg) translateX(-1rem);
+    transform: translateY(-0.25rem) rotate(-3deg) translateX(-0.5rem);
   }
   100% {
-    transform: translateY(0) rotate(-3deg) translateX(-1rem);
+    transform: translateY(0) rotate(-3deg) translateX(-0.5rem);
   }
 }
 
@@ -115,5 +203,55 @@
 //     > div.show {
 //       margin: 0 auto;
 //     }
+//   }
+// }
+
+// card 3d hover effect
+@keyframes card_3D_hover_effect {
+  0% {
+    opacity: 0.25;
+    transform: scale(80%);
+    // background-color: 0 30px 20px rgb(0 0 0 / 30%);
+    background: hsla(0, 0%, 0%, 0.4);
+    // width: 100%;
+  }
+  25% {
+    // background-color: 0 30px 20px rgb(0 0 0 / 40%);
+    background: hsla(0, 0%, 0%, 0.6);
+    // width: 80%;
+    opacity: 0.5;
+    transform: scale(100%);
+  }
+  50% {
+    // background-color: 0 30px 20px rgb(0 0 0 / 40%);
+    background: hsla(0, 0%, 0%, 0.6);
+    // width: 80%;
+    opacity: 0.5;
+    transform: scale(80%);
+  }
+  75% {
+    // background-color: 0 30px 20px rgb(0 0 0 / 40%);
+    background: hsla(0, 0%, 0%, 0.6);
+    // width: 80%;
+    opacity: 0.5;
+    transform: scale(100%);
+  }
+  100% {
+    // background-color: 0 30px 20px rgb(0 0 0 / 30%);
+    background: hsla(0, 0%, 0%, 0.4);
+    // width: 100%;
+    opacity: 0.25;
+    transform: scale(80%);
+  }
+}
+
+// @keyframes shadow {
+//   from {
+//     opacity: 0;
+//     transform: scale(0);
+//   }
+//   to {
+//     opacity: 0.5;
+//     transform: scale(100%);
 //   }
 // }

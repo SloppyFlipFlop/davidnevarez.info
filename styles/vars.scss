@@ -16,6 +16,11 @@ $secondary_background: linear-gradient(184.12deg, #20b5e7 6.72%, #ff6b00 93.28%)
 $red-orange: rgb(228, 104, 69);
 $light-blue-voilet: rgb(144, 170, 254);
 
+$raised_shadow_effect: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$subtle_inward_shadow_effect: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+
 @mixin random-bgr() {
   background: rgb(random(255), random(255), random(255));
 }
+
+$hover-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);

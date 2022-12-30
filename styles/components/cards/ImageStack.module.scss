@@ -49,6 +49,19 @@ $even_background_card_color: linear-gradient(45deg, #ff6b00 6.72%, #ff9e00 93.28
   height: 10rem;
   position: relative;
 
+  // &::after {
+  // background: red;
+  // content: " ";
+  // position: absolute;
+  // width: 100%;
+  // height: 10px;
+  // border-radius: 50%;
+  // left: 0;
+  // bottom: -20px;
+  // box-shadow: 0 30px 20px rgb(0 0 0 / 30%);
+  // animation: card_3D_hover_effect 10s infinite linear;
+  // }
+
   // .photo {
   &:nth-child(odd) {
     &::after {
@@ -62,26 +75,49 @@ $even_background_card_color: linear-gradient(45deg, #ff6b00 6.72%, #ff9e00 93.28
       background: $odd_background_card_color;
       // @include random-bgr();
       z-index: -1;
-      animation: odd_background_card_idle_animation 10s linear infinite;
-      animation-fill-mode: reverse;
+      // animation: odd_background_card_idle_animation 10s linear infinite;
+      animation: background_card_animation 10s linear infinite;
+
+      animation-fill-mode: backwards;
+      box-shadow: $subtle_inward_shadow_effect;
     }
   }
-  &:nth-child(even) {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      background: $even_background_card_color;
-      z-index: -1;
-      animation: even_background_card_idle_animation 10s linear infinite;
-      animation-fill-mode: reverse;
-    }
-  }
+  // &:nth-child(even) {
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     border-radius: inherit;
+  //     background: $even_background_card_color;
+  //     z-index: -1;
+  //     animation: even_background_card_idle_animation 10s linear infinite;
+  //     animation-fill-mode: reverse;
+  //     box-shadow: $subtle_inward_shadow_effect;
+  //   }
   // }
+
+  // }
+}
+
+@keyframes background_card_animation {
+  0% {
+    transform: translateY(0) rotate(3deg) translateX(0.5rem);
+  }
+  25% {
+    transform: translateY(0.5rem) rotate(3deg) translateX(0.5rem);
+  }
+  50% {
+    transform: translateY(0rem) rotate(3deg) translateX(0.5rem);
+  }
+  75% {
+    transform: translateY(0.25rem) rotate(3deg) translateX(0.5rem);
+  }
+  100% {
+    transform: translateY(0) rotate(3deg) translateX(0.5rem);
+  }
 }
 
 @keyframes even_background_card_idle_animation {

@@ -17,7 +17,8 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
 
 import pageStyles from "../styles/pages/Home.module.scss";
-import CloudBackground from "../components/CloudBackground";
+
+import CloudAnimation from "../components/CloudAnimation";
 
 export default function Home() {
   const { state } = useContext(AppContext);
@@ -230,7 +231,20 @@ export default function Home() {
         </FadeInCard>
       </section>
 
-      <CloudBackground />
+      <CloudAnimation
+        numClouds={5}
+        size={[
+          {
+            width: 150,
+            height: 100,
+          },
+          {
+            width: 200,
+            height: 150,
+          },
+        ]}
+        speed={0.25}
+      />
 
       {/* <section id={pageStyles.projects_section}></section> */}
 

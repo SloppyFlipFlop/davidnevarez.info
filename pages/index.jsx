@@ -20,23 +20,24 @@ import pageStyles from "../styles/pages/Home.module.scss";
 
 import CloudAnimation from "../components/CloudAnimation";
 import AboutMeSection from "../components/pages/home/AboutMeSection";
+import ExtracurricularSection from "../components/pages/home/ExtracurricularSection";
 
 export default function Home() {
   const { state } = useContext(AppContext);
-  const photoDividerImages = [
-    {
-      src: "/images/David_in_Chicago.jpg",
-      alt: "Image of David inside the Shedd Aquarium in Chicago",
-    },
-    {
-      src: "/images/Chicago_towers.jpeg",
-      alt: "Image of some buidling towers in Chicago",
-    },
-    {
-      src: "/images/FBLA_Chicago_David.jpg",
-      alt: "Image of David at millennium park in Chicago",
-    },
-  ];
+  // const photoDividerImages = [
+  //   {
+  //     src: "/images/David_in_Chicago.jpg",
+  //     alt: "Image of David inside the Shedd Aquarium in Chicago",
+  //   },
+  //   {
+  //     src: "/images/Chicago_towers.jpeg",
+  //     alt: "Image of some buidling towers in Chicago",
+  //   },
+  //   {
+  //     src: "/images/FBLA_Chicago_David.jpg",
+  //     alt: "Image of David at millennium park in Chicago",
+  //   },
+  // ];
   return (
     <main>
       <section id={pageStyles.hero_section}>
@@ -54,7 +55,7 @@ export default function Home() {
 
       <AboutMeSection />
 
-      <section id={pageStyles.extracurricular_section}>
+      {/* <section id={pageStyles.extracurricular_section}>
         <h2 id={pageStyles.section_title}>
           Extracurricular
           <svg
@@ -106,7 +107,8 @@ export default function Home() {
             </SlideUpCard>
           </div>
         </FadeInCard>
-      </section>
+      </section> */}
+      <ExtracurricularSection />
 
       {/* <CloudAnimation
         numClouds={5}

@@ -1,0 +1,39 @@
+@use "./../../../vars.scss" as *;
+
+#extracurricular_section {
+  position: relative;
+  padding: 1rem 0;
+  min-height: fit-content;
+  margin: 6rem 0;
+
+  #section_title {
+    font-size: 2.5rem;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  #extracurricular_list {
+    display: flex;
+    flex-direction: column;
+    .list_item {
+      margin: 2rem 0;
+      list-style: none;
+      position: relative;
+    }
+  }
+}
+
+// desktop styles for extracurriculars section
+@media (min-width: $desktop_breakpoint) {
+  #extracurricular_section {
+    #section_title {
+      font-size: 3.5rem;
+    }
+    #extracurricular_list {
+      .list_item {
+        margin: 3.5rem 0; // the title logo takes up 6rem, so 3rem would account for the padding and the .5rem added is so it looks like there is padding on the list_item
+      }
+    }
+  }
+}

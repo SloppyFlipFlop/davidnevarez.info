@@ -1,0 +1,45 @@
+@use "./../../../../vars.scss" as *;
+
+// if you want to style the photo divider section
+// go to: styles/components/photoDivider/PhotoDivider.module.scss
+
+.title_image_conatiner {
+  position: absolute;
+  top: -2%;
+  right: 12%;
+  width: 10rem;
+  height: 10rem;
+  z-index: 0;
+  opacity: 1;
+  transform: all 5s ease;
+  transform: rotate(8deg);
+}
+
+// description container styles
+
+#description_container {
+  background: $primary_background;
+  color: $primary_font_color;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  text-align: left;
+  p {
+    margin-top: 1rem;
+  }
+}
+@media (min-width: $desktop_breakpoint) {
+  .title_image_conatiner {
+    position: absolute;
+    top: -15%;
+    right: 5%;
+    width: 10rem;
+    height: 10rem;
+    z-index: -1;
+    opacity: 1;
+    transform: all 5s ease;
+    transform: rotate(8deg);
+  }
+  #description_container {
+    margin: 0 3rem;
+  }
+}

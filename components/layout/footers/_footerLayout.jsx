@@ -57,21 +57,18 @@ const Footer = () => {
         />
 
         <div class={footerStyles.ocean}>
-          {state.isMobile ? (
+          {/* {state.isMobile ? (
             <>
               <div class={footerStyles.wave}></div>
               <div class={footerStyles.wave}></div>
             </>
           ) : (
-            <>
-              <div class={footerStyles.wave}></div>
-              <div class={footerStyles.wave}></div>
-              <div class={footerStyles.wave}></div>
-            </>
-          )}
+            <> */}
           <div class={footerStyles.wave}></div>
           <div class={footerStyles.wave}></div>
           <div class={footerStyles.wave}></div>
+          {/* </>
+          )} */}
         </div>
       </footer>
     </FadeInCard>

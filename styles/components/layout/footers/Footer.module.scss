@@ -40,6 +40,12 @@
     }
   }
 
+  @media screen, (min-width: $desktop_breakpoint) {
+    #boat {
+      width: 10rem;
+    }
+  }
+
   /* waves */
   .ocean {
     height: 80px; /* change the height of the waves here */

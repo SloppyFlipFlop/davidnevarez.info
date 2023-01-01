@@ -56,18 +56,6 @@ const MobilePhotoDivider = ({ images }) => {
         <Swirl color={"#24c7fd"} threshold={0.3} />
       </div>
 
-      {sectionTitleImage == "FBLA" && (
-        <div className={sectionStyles.background_image_conatiner}>
-          <Image
-            id={sectionStyles.FBLA_logo}
-            class={sectionStyles.extracurricular_background_image}
-            src="/FBLA_Arizona_logo.png"
-            alt="FBLA logo"
-            layout="fill"
-          />
-        </div>
-      )}
-
       <ul id={mobileStyles.card_wrapper}>
         {images?.map((image, index) => {
           return (

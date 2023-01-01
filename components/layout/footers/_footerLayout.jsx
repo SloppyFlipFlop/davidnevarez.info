@@ -37,6 +37,7 @@ const Footer = () => {
         </ul>
         <span id={footerStyles.copyright}>{currentYear}</span>
 
+        {/* background footer animation */}
         <Image
           id={footerStyles.boat}
           src="/boat.svg"
@@ -44,6 +45,7 @@ const Footer = () => {
           height={150}
           alt="boat"
         />
+
         <div class={footerStyles.ocean}>
           <div class={footerStyles.wave}></div>
           <div class={footerStyles.wave}></div>

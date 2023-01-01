@@ -1,12 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+
+// components
 import Image from "next/image";
 import Link from "next/link";
 import FadeInCard from "../../cards/FadeIn";
+
+// icons
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+
+// app context
+import { AppContext } from "./../../../context/AppContext";
+
+// styles
 import footerStyles from "./../../../styles/components/layout/footers/Footer.module.scss";
 
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState(null);
+  const { state } = useContext(AppContext);
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
@@ -47,6 +57,18 @@ const Footer = () => {
         />
 
         <div class={footerStyles.ocean}>
+          {state.isMobile ? (
+            <>
+              <div class={footerStyles.wave}></div>
+              <div class={footerStyles.wave}></div>
+            </>
+          ) : (
+            <>
+              <div class={footerStyles.wave}></div>
+              <div class={footerStyles.wave}></div>
+              <div class={footerStyles.wave}></div>
+            </>
+          )}
           <div class={footerStyles.wave}></div>
           <div class={footerStyles.wave}></div>
           <div class={footerStyles.wave}></div>

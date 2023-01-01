@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import FadeInCard from "../../cards/FadeIn";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
@@ -36,7 +37,18 @@ const Footer = () => {
         </ul>
         <span id={footerStyles.copyright}>{currentYear}</span>
 
-        <div id={footerStyles.background_stack_effect}></div>
+        <Image
+          id={footerStyles.boat}
+          src="/boat.svg"
+          width={300}
+          height={150}
+          alt="boat"
+        />
+        <div class={footerStyles.ocean}>
+          <div class={footerStyles.wave}></div>
+          <div class={footerStyles.wave}></div>
+          <div class={footerStyles.wave}></div>
+        </div>
       </footer>
     </FadeInCard>
   );

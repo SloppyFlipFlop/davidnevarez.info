@@ -63,7 +63,7 @@ class CloudAnimation extends React.Component {
           height: "100%",
           width: "100%",
           position: "fixed",
-          zIndex: -1,
+          zIndex: -3,
           top: 0,
           right: 0,
         }}
@@ -80,7 +80,7 @@ class CloudAnimation extends React.Component {
               left: `${pos.x}%`,
               top: `${pos.y}%`,
               position: "relative",
-              zIndex: -3,
+              // zIndex: -3,
             }}
           />
         ))}

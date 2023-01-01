@@ -6,7 +6,7 @@ import Footer from "./../../components/layout/footers/_footerLayout";
 
 // styles
 
-import layoutStyles from "./../../styles/components/layout/pagelayout.module.scss";
+import layoutStyles from "./../../styles/components/layout/pageLayout.module.scss";
 
 // global fonts
 import { Inter } from "@next/font/google";

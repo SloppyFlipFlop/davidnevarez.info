@@ -5,7 +5,7 @@
 
 .title_image_conatiner {
   position: absolute;
-  top: -2%;
+  top: -1%;
   right: 12%;
   width: 10rem;
   height: 10rem;
@@ -17,7 +17,8 @@
 
 // description container styles
 
-#description_container {
+#infomation_container {
+  position: relative;
   background: $primary_background;
   color: $primary_font_color;
   padding: 2rem 1.5rem;
@@ -26,11 +27,106 @@
   p {
     margin-top: 1rem;
   }
+
+  .section_wrapper {
+    min-height: fit-content;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .section_title {
+      width: 100%;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    #award_list {
+      width: 100%;
+    }
+  }
 }
+
+.section_title {
+  color: orange;
+}
+
+#award_list {
+  position: relative;
+  .award_list_item {
+    // width: 50%;
+    position: relative;
+    list-style: none;
+    display: flex;
+    border-left: $blue_background 1px solid;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 0 1rem 1rem 1rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+      left: -9px;
+      top: 0;
+      background: $orange_background;
+      border: 2px solid $blue_background;
+    }
+
+    .award_title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    .year_recieved {
+      background: #f7f8f9;
+      color: orange;
+      padding: 0 0.5rem;
+      border-radius: 0.25rem;
+    }
+    .award_level {
+      font-size: 01rem;
+      // margin-bottom: 0.5rem;
+      margin: 0.5rem 0;
+      color: $blue_background;
+      // background: white;
+      // padding-left: 0;
+      text-decoration: underline;
+      font-style: italic;
+    }
+    .award_description {
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+    }
+    .content_container {
+      position: relative;
+      .content_image {
+        border-radius: 1rem;
+      }
+      .link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0.5rem;
+        color: $white_background;
+        text-decoration: none;
+        background: $primary_background;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        z-index: 1;
+        transition: all 0.3s ease-in;
+        &:hover {
+          background: $blue_background;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: $desktop_breakpoint) {
   .title_image_conatiner {
     position: absolute;
-    top: -15%;
+    top: -5%;
     right: 5%;
     width: 10rem;
     height: 10rem;
@@ -39,7 +135,99 @@
     transform: all 5s ease;
     transform: rotate(8deg);
   }
-  #description_container {
+  #infomation_container {
     margin: 0 3rem;
+    .section_wrapper {
+      #award_list {
+        // width: 50%;
+      }
+    }
   }
 }
+
+// slide in from right component styles
+.slide_in_from_right {
+  // opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
+  transition: all 0.8s linear;
+}
+
+.hide {
+  // opacity: 0;
+  transform: translateX(-100%);
+  filter: blur(10px);
+  transition: all 0.8s linear;
+}
+
+// fade in component styles
+.fade_in {
+  position: absolute;
+
+  opacity: 1;
+  transition: all 1s;
+}
+
+.hide_image {
+  opacity: 0;
+  transition: all 1s;
+
+  // transition: all 0.8s linear;
+}
+
+// card flip component styles
+
+// #card_container {
+//   position: relative;
+//   // width: 100%;
+//   // height: 100%;
+//   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+//   transition: transform 1s;
+//   transform-style: preserve-3d;
+// }
+// .flip_card {
+//   position: relative;
+//   transform: rotateY(0);
+//   transition: transform 0.5s;
+//   opacity: 1;
+// }
+
+// .hide_card_image {
+//   transform: rotateY(180deg);
+//   transition: all 0.8s linear;
+//   opacity: 0;
+// }
+
+// create a card flip animation
+.flip_card {
+  // transform: scale(1);
+  // transform-origin: center;
+  transition: all 0.5s ease;
+  min-height: fit-content;
+  height: 5rem;
+  width: 5rem;
+  // opacity: 1;
+}
+
+.hide_card_image {
+  // transform: scale(1);
+  filter: blur(5px);
+  z-index: -5;
+
+  // opacity: 0;
+}
+
+// @keyframes leaves {
+//   0% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(2);
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }
+
+// create a card flip animation

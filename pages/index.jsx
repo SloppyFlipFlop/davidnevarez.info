@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // context
 import { useContext } from "react";
@@ -24,20 +24,8 @@ import ExtracurricularSection from "../components/pages/home/ExtracurricularSect
 
 export default function Home() {
   const { state } = useContext(AppContext);
-  // const photoDividerImages = [
-  //   {
-  //     src: "/images/David_in_Chicago.jpg",
-  //     alt: "Image of David inside the Shedd Aquarium in Chicago",
-  //   },
-  //   {
-  //     src: "/images/Chicago_towers.jpeg",
-  //     alt: "Image of some buidling towers in Chicago",
-  //   },
-  //   {
-  //     src: "/images/FBLA_Chicago_David.jpg",
-  //     alt: "Image of David at millennium park in Chicago",
-  //   },
-  // ];
+  const [showCLouds, setShowCLouds] = useState(false);
+
   return (
     <main>
       <section id={pageStyles.hero_section}>
@@ -110,21 +98,22 @@ export default function Home() {
       </section> */}
       <ExtracurricularSection />
 
-      {/* <CloudAnimation
-        numClouds={5}
-        size={[
-          {
-            width: 150,
-            height: 100,
-          },
-          {
-            width: 200,
-            height: 150,
-          },
-        ]}
-        speed={0.25}
-      /> */}
-
+      {/* {showCLouds && (
+        <CloudAnimation
+          numClouds={5}
+          size={[
+            {
+              width: 150,
+              height: 100,
+            },
+            {
+              width: 200,
+              height: 100,
+            },
+          ]}
+          speed={0.25}
+        />
+      )} */}
       {/* <section id={pageStyles.projects_section}></section> */}
     </main>
   );

@@ -1,0 +1,15 @@
+@use "./../../../vars.scss" as *;
+
+#form_container {
+  background: $primary_background;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  #form_title {
+    color: $primary_font_color;
+  }
+
+  input {
+    border: 1px solid $primary_font_color;
+    border-radius: 0.2rem;
+  }
+}

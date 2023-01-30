@@ -15,6 +15,7 @@ export const AppContextProvider = ({ children }) => {
         dispatch({ type: "SET_IS_MOBILE", payload: false });
       }
     };
+
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);

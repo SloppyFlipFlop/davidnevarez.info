@@ -19,8 +19,12 @@ import { FaArrowDown } from "react-icons/fa";
 import pageStyles from "../styles/pages/Home.module.scss";
 
 import CloudAnimation from "../components/CloudAnimation";
+
+// section components
 import AboutMeSection from "../components/pages/home/AboutMeSection";
 import ExtracurricularSection from "../components/pages/home/ExtracurricularSection";
+import ProjectSection from "../components/pages/home/ProjectSection";
+import ContactForm from "./../components/pages/home/ContactForm";
 
 export default function Home() {
   const { state } = useContext(AppContext);
@@ -97,6 +101,10 @@ export default function Home() {
         </FadeInCard>
       </section> */}
       <ExtracurricularSection />
+
+      <ProjectSection />
+
+      <ContactForm />
 
       {/* {showCLouds && (
         <CloudAnimation

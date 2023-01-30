@@ -41,7 +41,7 @@ const awards = [
       "During the state level of website design, I was tasked to create a webssite for a local photographer. In which although I did not move on to the national level, I was able to to learn a lot from my first year in FBLA and was able to learn a lot about web development.",
     content: {
       type: "website",
-      imageSrc: "/images/project_images/FBLA_State_Website_2021.png",
+      imageSrc: "/images/extracurricular_images/FBLA_State_Website_2021.png",
       imageAlt: "Image of the website I created for the FBLA state conference",
       imageWidth: "20rem",
       imageHeight: "11rem",
@@ -58,7 +58,8 @@ const awards = [
       type: "award",
       imageWidth: "10rem",
       imageHeight: "12rem",
-      imageSrc: "/images/project_images/FBLA_State_ChapterAward_2022.jpg",
+      imageSrc:
+        "/images/extracurricular_images/FBLA_State_ChapterAward_2022.jpg",
     },
   },
   {

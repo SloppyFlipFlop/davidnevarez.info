@@ -40,12 +40,6 @@
     }
   }
 
-  @media screen, (min-width: $desktop_breakpoint) {
-    #boat {
-      width: 10rem;
-    }
-  }
-
   /* waves */
   .ocean {
     height: 80px; /* change the height of the waves here */
@@ -164,5 +158,14 @@
   }
   100% {
     transform: rotate(2deg);
+  }
+}
+
+@media screen, (min-width: $desktop_breakpoint) {
+  #footer_container {
+    margin-top: 10rem;
+  }
+  #boat {
+    width: 10rem;
   }
 }

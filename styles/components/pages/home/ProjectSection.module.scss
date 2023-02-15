@@ -91,6 +91,13 @@
       }
     }
   }
+
+  #project_link {
+    text-decoration: none;
+    color: $primary_font_color;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 @keyframes up_and_down {

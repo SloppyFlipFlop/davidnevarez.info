@@ -1,0 +1,23 @@
+[
+  {
+    "title": "ASU CodeDevil Website",
+    "getScreenshot": true,
+    "techStack": ["Next.js", "Typescript", "SCSS", "Prisma"],
+    "image_name": "CodeDevil Website",
+    "link": "https://codedevils.org/en-us/"
+  },
+  {
+    "title": "Gopher Courier Express",
+    "descrption": "A compelete updated web application for a Gopher Couriere Express",
+    "techStack": ["Next.js", "Node.js", "SCSS"],
+    "image_name": "gopher_couriere_express",
+    "getScreenshot": true,
+    "link": "https://www.gopherphoenix.com/"
+  },
+  {
+    "title": "2022 FBLA Website",
+    "getScreenshot": false,
+    "techStack": ["React.js", "HTML5", "SCSS", "Javascript", "MongoDB"],
+    "link": "https://github.com/SloppyFlipFlop/CS201_Capstone"
+  }
+]

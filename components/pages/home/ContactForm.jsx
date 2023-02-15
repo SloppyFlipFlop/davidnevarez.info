@@ -19,9 +19,11 @@ const Mobile = () => {
     <form id={formStyles.form_container}>
       <h2 id={formStyles.form_title}>Contact</h2>
 
-      <input type="text" />
+      <div id={formStyles.input_wrapper}>
+        <input type="text" />
 
-      <input type="text" />
+        <input type="text" />
+      </div>
     </form>
   );
 };

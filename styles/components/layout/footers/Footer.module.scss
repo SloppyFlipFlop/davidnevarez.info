@@ -1,6 +1,7 @@
 @use "./../../../vars.scss" as *;
 
 #footer_container {
+  // margin-top: auto;
   background: $primary_background;
   color: $primary_font_color;
   max-width: 100vw;

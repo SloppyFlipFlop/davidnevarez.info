@@ -116,22 +116,23 @@ export default function Home() {
               About <span>Me</span>
             </h2>
             <p className={pageStyles.description}>
-              Hello 👋🏼, my name is Fernando, but I go by David. Now with that
-              out of the way, let me tell you a bit about me. So I&#39;m a
-              college undergraduate student at Arizona State University studying
-              computer science. I&#39;m also a certified Full-Stack Developer,
-              knowing a wide range and languages and frameworks. I&#39;m also a
-              member of ASU&#39;s CodeDevil, where I&#39;m currently helping to
-              develop a new version of the club website under the Next.js
-              framework. Like how this website is being built.
+              Greetings! I&#39;m David, an undergraduate student at Arizona
+              State University pursuing a degree in Computer Science. As a
+              certified Full-Stack Developer, I possess a diverse skillset in
+              various coding languages and frameworks. Additionally, I am an
+              officer in ASU&#39;s CodeDevil community, where I am leading the
+              development of a new version of the club website using Next.js
+              framework.
             </p>
             <p className={pageStyles.description}>
-              However, I&#39;m not just a developer because I also strive to be
-              a leader wherever I can. However, although I&#39;m not in a
-              leadership position at the moment, I do plan to be in the future.
-              But as of now, I&#39;m trying to take part in as many research
-              opportunities as I can right now. Since I&#39;m wanting to dive
-              into artificial intelligence in the future.
+              While I have a passion for development, I also strive to be a
+              leader in any way possible. Currently, I hold a leadership
+              position as an officer in ASU&#39;s CodeDevil community, where I
+              am actively involved in driving the development of new projects
+              and initiatives. Additionally, I am actively looking to pursue
+              research opportunities to further expand my knowledge in
+              artificial intelligence, an area I am eager to explore more in the
+              future.
             </p>
             <div id={pageStyles.socials}>
               <Image

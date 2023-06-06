@@ -150,11 +150,10 @@
   // opacity: 1;
   filter: blur(0px);
   transform: translateX(0%);
-  transition: all 0.8s linear;
+  transition: all 0.8s ease;
 }
 
 .hide {
-  // opacity: 0;
   transform: translateX(-100%);
   filter: blur(10px);
   transition: all 0.8s linear;

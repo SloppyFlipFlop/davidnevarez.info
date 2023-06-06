@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { AppContext } from "./../context/AppContext";
 
 // styles
-import sectionStyles from "./../styles/components/pages/home/ExtracurricularSection.module.scss";
+// import sectionStyles from "./../styles/components/pages/home/ExtracurricularSection.module.scss";
 import desktopStyles from "./../styles/components/photoDivider/desktop.module.scss";
 import mobileStyles from "./../styles/components/photoDivider/mobile.module.scss";
 

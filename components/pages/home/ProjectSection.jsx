@@ -47,65 +47,24 @@ const getIcon = (icon) => {
 };
 
 const ProjectSection = () => {
+  // make a slideshow conatiner that will allow for mobile tounch movement
+
   return (
-    <section id={projectStyles.section_wrapper}>
-      <h2 id={projectStyles.section_title}>Projects</h2>
-      <ul id={projectStyles.project_wrapper}>
-        {projects.map((project, index) => {
-          const {
-            title,
-            image_name,
-            getScreenshot,
-            descrption,
-            techStack,
-            link,
-          } = project;
-          // console.log(image_name);
-          // screenshot(image_name, link);
-          return (
-            <li key={index} className={projectStyles.list_item}>
-              {title && <h3 className={projectStyles.item_title}>{title}</h3>}
-              {/* {getScreenshot && (
-                <Image
-                  src={"/util/project_images/" + "CD-Library" + ".png"}
-                  alt={title}
-                  width={500}
-                  height={300}
-                />
-              )} */}
-
-              {descrption && (
-                <p className={projectStyles.item_des}>{descrption}</p>
-              )}
-
-              <Link
-                target="_blank"
-                className={projectStyles.item_link}
-                href={link}
-              >
-                Vist
-              </Link>
-
-              <div id={projectStyles.icon_wrapper}>
-                <h2 className={projectStyles.title}>Techology Used:</h2>
-                <ul id={projectStyles.icon_list}>
-                  {techStack.map((stack, index) => {
-                    return (
-                      <li key={index} className={projectStyles.icon_wrapper}>
-                        {getIcon(stack)}
-                      </li>
-                    ); // get icon has the className of icon
-                  })}
-                </ul>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-      <Link href="/projects" id={projectStyles.project_link}>
-        <h3>See More Projects</h3>
-      </Link>
-    </section>
+    // <div>
+    <ul id={projectStyles.container}>
+      {projects.map((project) => {
+        const { id, link, title, descrption } = project;
+        return (
+          <li key={id} className={projectStyles.project}>
+            <Link href={`${link}`} className={projectStyles.project_wrapper}>
+              <h3 className={projectStyles.title}>{title}</h3>
+              <p>{descrption}</p>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+    // {/* </div> */}
   );
 };
 

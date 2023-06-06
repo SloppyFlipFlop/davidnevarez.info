@@ -13,7 +13,7 @@ import { useContext } from "react";
 import { AppContext } from "./../../../../context/AppContext";
 
 // styles
-import sectionStyles from "./../../../../styles/components/pages//home/ExtracurricularSections/FBLA.module.scss";
+import sectionStyles from "./../../../../styles/components/pages/home/ExtracurricularSections/FBLA.module.scss";
 import Link from "next/link";
 import Swirl from "../../../Swirl";
 

@@ -4,7 +4,7 @@ import React from "react";
 import FBLA from "./ExtracurricularSections/FBLA";
 
 // styles
-import sectionStyles from "./../../../styles/components/pages//home/ExtracurricularSection.module.scss";
+import sectionStyles from "./../../../styles/components/pages/home/ExtracurricularSection.module.scss";
 
 const ExtracurricularSection = () => {
   return (
@@ -27,7 +27,6 @@ const ExtracurricularSection = () => {
           ></path>
         </svg>
       </h2>
-
       <ul id={sectionStyles.extracurricular_list}>
         <li className={sectionStyles.list_item}>
           <FBLA />

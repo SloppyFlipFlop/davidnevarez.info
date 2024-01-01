@@ -136,7 +136,7 @@ export default function Home() {
                     </p>
                   </Link>
                 </li>
-                <li className="flex items-center">
+                {/* <li className="flex items-center">
                   <Link
                     href="https://www.instagram.com/david_nevarez__/"
                     target="_blank"
@@ -148,7 +148,7 @@ export default function Home() {
                       Instagram
                     </p>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

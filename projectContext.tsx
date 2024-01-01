@@ -7,8 +7,10 @@ const data = [
     homeImage: "/images/wpcarey_project.png",
     projectImage: "/images/project/wpcarey.png",
     externalLink: "https://wpcarey.asu.edu/",
-    projectFocus: ["Frontend"],
-    projectDescription: `Embarking on a transformative project in the dynamic realm of digital innovation, I led the comprehensive redevelopment of a prominent brand's online presence. From meticulously implementing design patterns aligned with brand standards to exploring innovative design concepts translated into seamless web development solutions, every aspect was intricately crafted. Responsibilities included routine content reviews, prompt issue resolution, and the adept use of design prototypes for seamless updates, ensuring optimal functionality. The outcome: a streamlined, engaging online presence exceeding expectations and exemplifying the fusion of creativity and functionality. Explore this digital journey in my portfolio, showcasing the convergence of design and development expertise.`,
+    projectFocus: ["Frontend", "SEO"],
+    projectDescription: `During my time as the Website Coordinator at the W. P. Carey School of Business, I was entrusted with the development and implementation of design patterns and content updates. Embracing the task, I explored innovative design concepts and translated them into visually appealing web development solutions, ensuring alignment with brand standards and guidelines. My role also involved organizing regular web development-based content reviews to identify areas for improvement promptly. I executed design prototypes using development tools, facilitating seamless content updates and optimizing the user experience. Through strategic web development efforts, I successfully streamlined the website's aesthetics, providing the W. P. Carey School of Business with an engaging and modern online presence.
+
+    `,
   },
   {
     name: "CodeDevils",
@@ -18,7 +20,7 @@ const data = [
     externalLink: "https://codedevils.org/",
     projectFocus: ["Frontend", "Backend", "SEO"],
     projectDescription:
-      "Undertaking a pivotal role in CodeDevils' website modernization initiative, I led the transition from an outdated codebase to a contemporary web framework. As the driving force behind front-end development, I collaborated seamlessly with a senior web developer overseeing the back-end aspects. My contributions extended to the implementation of cutting-edge web frameworks, integration of libraries, and incorporation of APIs to enhance data management and security. The result was a significant enhancement in website performance, delivering a modern web stack that empowered CodeDevils with an optimized online presence and fortified organizational capabilities. Explore the details of this impactful project, exemplifying the synergy of front-end leadership and technological innovation, within my portfolio.",
+      "In the dynamic realm of web development at CodeDevils, I assumed the role of Lead Front-End Application Developer and Junior Back-End Developer. Tasked with modernizing the organization's website, I orchestrated the transition from an outdated codebase to a cutting-edge web framework. Collaborating closely with a senior web developer, I spearheaded front-end development efforts, incorporating APIs for enhanced data management and protection. The result was a remarkable increase in website performance, delivering a modern web stack that significantly elevated CodeDevils' online presence. My responsibilities extended beyond coding as I worked collaboratively with team members to define project goals, deliverables, and timelines for this transformative website update.",
   },
   {
     name: "Gopher Courier Express",
@@ -28,7 +30,7 @@ const data = [
     externalLink: "https://www.gopherphoenix.com/",
     projectFocus: ["Frontend"],
     projectDescription:
-      "Championing the revitalization of Gopher Courier Express's online presence, I spearheaded a comprehensive overhaul of their website. A meticulous performance analysis became the cornerstone, identifying bottlenecks and implementing targeted solutions that resulted in an outstanding 88.9% improvement in website responsiveness. Collaboration with stakeholders played a pivotal role as I translated business requirements into technical solutions, ensuring seamless integration. The culmination of these efforts was the successful delivery of a refreshed website, boasting elevated visual appeal and an enhanced user experience. Delve into the intricacies of this project within my portfolio, showcasing how strategic analysis and collaborative innovation transformed Gopher Courier Express's online landscape.",
+      "At Gopher Courier Express, I served as a Website Developer, leading the charge in enhancing the company's online presence. Tasked with overhauling the website, I conducted a thorough performance analysis, identifying and addressing bottlenecks that resulted in an impressive 88.9% improvement in website responsiveness. Collaborating closely with stakeholders, I translated business requirements into technical solutions and ensured their seamless integration. The culmination of these efforts was the successful delivery of a refreshed website, not only elevating its visual appeal but also significantly enhancing the overall user experience.",
   },
 ];
 

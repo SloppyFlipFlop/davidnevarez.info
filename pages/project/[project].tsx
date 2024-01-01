@@ -85,13 +85,13 @@ const Page: React.FC = () => {
             priority
             className="mb-4"
           />
-          <button
-            onClick={() => router.push("/")}
+          <Link
+            href={"/"}
             className="flex justify-center md:justify-start items-center w-full gap-2"
           >
             <IoMdArrowBack className="text-4xl" />
             <p>Go back to home page</p>
-          </button>
+          </Link>
         </section>
       </div>
     </main>

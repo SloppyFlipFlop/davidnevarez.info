@@ -1,0 +1,30 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.bg-text-gradient {
+  --bg-size: 300%;
+  --color-one: #35b8e3;
+  --color-two: #f45925;
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bg-text-gradient {
+    animation: gradientShift 8s linear infinite;
+  }
+
+  @keyframes gradientShift {
+    to {
+      background-position: 300% 0;
+    }
+  }
+}

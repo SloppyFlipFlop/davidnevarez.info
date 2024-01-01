@@ -43,7 +43,10 @@ export default function Home() {
             })}
           </motion.h1>
           <motion.h1 className="md:ml-8 mt-2 md:mt-8">
-            {"Website-Developer".split("").map((letter, id) => {
+            {"Website Developer".split("").map((letter, id) => {
+              if (letter === " ") {
+                return <span key={id}>&nbsp;</span>;
+              }
               return (
                 <motion.span
                   key={id}

@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 
 import { ProjectContext } from "@/projectContext";
+import CustomCursor from "@/components/CustomCursor";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -14,6 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AnimatePresence mode="wait">
       <motion.div key={router.pathname}>
+        <>
+          <CustomCursor />{" "}
+        </>
         <ProjectContext.Provider value={projectData}>
           <ThemeProvider attribute="class">
             <Component {...pageProps} />

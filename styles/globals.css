@@ -2,6 +2,43 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body,
+a,
+button,
+input,
+textarea {
+  cursor: url("./../public/custom-cursor.png"), auto;
+}
+
+.custom-cursor {
+  position: fixed;
+  @apply border-[3px] border-solid border-blue bg-transparent;
+
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999999 !important ;
+  backdrop-filter: blur(1px);
+
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  /* cursor: none !important; Let's hide the default cursor so it looks way better */
+}
+
+/* We need to remove this custom cursor in mobile devices */
+@media screen and (max-width: 768px) {
+  .custom-cursor {
+    width: 0;
+    height: 0;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+  }
+}
+.custom-cursor.pointer {
+  opacity: 0 !important;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+}
+
 .bg-text-gradient {
   --bg-size: 300%;
   --color-one: #35b8e3;

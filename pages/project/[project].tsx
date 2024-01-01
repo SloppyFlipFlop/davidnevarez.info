@@ -82,6 +82,7 @@ const Page: React.FC = () => {
             alt="Picture of the project"
             width={300}
             height={200}
+            priority
             className="mb-4"
           />
           <button
